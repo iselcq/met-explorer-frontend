@@ -1,0 +1,28 @@
+.footer {
+  max-width: 1440px;
+  margin-top: 0;
+  margin-bottom: 0;
+  display: flex;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.footer__copyright {
+  margin-left: 104px;
+  font-style: normal;
+  font-family: "Galyon";
+  font-size: 14px;
+  color: #757676;
+}
+
+.footer__practicum {
+  font-style: normal;
+  font-family: "Galyon";
+  font-size: 16px;
+  color: black;
+  margin-left: 518px;
+}
+
+.footer__github-logo {
+  margin-left: 60px;
+}

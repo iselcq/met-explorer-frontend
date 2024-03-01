@@ -6,12 +6,7 @@ function Header() {
     <>
       <header className="header">
         <h2 className="header__title">The Met Xplorer</h2>
-        <img
-          src={met_logo}
-          alt="logotipo blanco de Around
-The U.S."
-          className="header__logo"
-        />
+        <img src={met_logo} alt="THE MET red logo" className="header__logo" />
       </header>
     </>
   );
