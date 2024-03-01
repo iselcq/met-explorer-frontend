@@ -1,3 +1,25 @@
 .header {
   max-width: 1440px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: rgba(196, 196, 196, 0.1) 1px solid;
+}
+
+.header__logo {
+  margin-bottom: 26px;
+  width: 100px;
+  color: #fff;
+  margin-top: 15px;
+  margin-right: 56px;
+}
+
+.header__title {
+  margin-bottom: 26px;
+  margin-right: 56px;
+  margin-left: 56px;
+  width: 200 px;
+  font-family: "Noto";
+  font-weight: 500;
+  text-transform: uppercase;
 }

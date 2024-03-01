@@ -1,0 +1,34 @@
+@font-face {
+  src: url("../../vendor/fonts/Galyon-Book-Italic.woff"); /*ruta del archivo fuente */
+  font-family: "Galyon"; /*nombre para identificar la fuente en los archivos CSS */
+  font-style: italic; /*tienes que declarar separadamente cada estilo si vas a usar distintos */
+}
+
+@font-face {
+  src: url("../../vendor/fonts/Galyon-Book.woff"); /*ruta del archivo fuente */
+  font-family: "Galyon"; /*nombre para identificar la fuente en los archivos CSS */
+  font-style: normal; /*tienes que declarar separadamente cada estilo si vas a usar distintos */
+}
+
+@font-face {
+  src: url("../../vendor/fonts/NotoSerifDisplay-Light.woff"); /*ruta del archivo fuente */
+  font-family: "Noto"; /*nombre para identificar la fuente en los archivos CSS */
+  font-weight: 300; /*tienes que declarar separadamente cada estilo si vas a usar distintos */
+}
+
+@font-face {
+  src: url("../../vendor/fonts/NotoSerifDisplay-Regular.woff"); /*ruta del archivo fuente */
+  font-family: "Noto"; /*nombre para identificar la fuente en los archivos CSS */
+  font-weight: 400; /*tienes que declarar separadamente cada estilo si vas a usar distintos */
+}
+
+@font-face {
+  src: url("../../vendor/fonts/NotoSerifDisplay-Medium.woff"); /*ruta del archivo fuente */
+  font-family: "Noto"; /*nombre para identificar la fuente en los archivos CSS */
+  font-weight: 500; /*tienes que declarar separadamente cada estilo si vas a usar distintos */
+}
+
+body {
+  max-width: 1440px;
+  margin: 0 auto;
+}
