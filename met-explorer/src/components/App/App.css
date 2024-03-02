@@ -37,4 +37,5 @@ body {
   background-size: cover;
   /* background-origin: padding-box; */
   /* falta el scroll */
+  background-attachment: fixed;
 }

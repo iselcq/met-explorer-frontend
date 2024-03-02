@@ -1,0 +1,43 @@
+.author {
+  max-width: 1440px;
+  display: flex;
+  background-color: #fae9ea;
+  opacity: 0.95;
+}
+
+.author__photo {
+  border-radius: 50%;
+  width: 464px;
+  height: 464px;
+  object-fit: cover;
+  margin-left: 104px;
+  margin-top: 80px;
+  margin-bottom: 80px;
+  filter: drop-shadow(10px 10px 4px rgb(68, 49, 49, 0.23));
+}
+
+.author__group {
+  flex-direction: column;
+  margin-left: 56px;
+  width: 600px;
+  margin-top: 131px;
+}
+
+.author__title {
+  color: rgb(68, 49, 49);
+  text-shadow: 2px 8px 6px rgba(0, 0, 0, 0.23);
+  font-family: "Noto";
+  font-style: normal;
+  font-size: 40px;
+  line-height: 46px;
+  text-transform: uppercase;
+}
+
+.author__info {
+  color: rgb(68, 49, 49);
+  font-family: "Galyon";
+  font-style: normal;
+  font-size: 18px;
+  line-height: 24px;
+  margin-top: 24px;
+}
