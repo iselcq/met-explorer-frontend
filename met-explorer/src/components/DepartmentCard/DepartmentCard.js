@@ -1,7 +1,7 @@
 import "./DepartmentCard.css";
 import pruebaCard from "../../images/pruebaCard.png";
 
-function DepartmentCard() {
+function DepartmentCard(props) {
   return (
     <>
       <div className="department-card">
@@ -10,9 +10,9 @@ function DepartmentCard() {
           className="department-card__image"
           src={pruebaCard}
         />
-        <p className="department-card__number"># items: 34</p>
+        <p className="department-card__number"> {props.card.displayName}</p>
         <h2 className="department-card__department">
-          American Decorative Arts
+          {props.card.displayName}
         </h2>
       </div>
     </>

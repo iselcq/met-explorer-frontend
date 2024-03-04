@@ -1,3 +1,5 @@
+import { Link, useNavigate } from "react-router-dom";
+
 import met_logo from "../../images/the_met_red.png";
 import "./Header.css";
 
@@ -5,8 +7,12 @@ function Header() {
   return (
     <>
       <header className="header">
-        <h2 className="header__title">The Met Xplorer</h2>
-        <img src={met_logo} alt="THE MET red logo" className="header__logo" />
+        <Link to="/" className="header__title">
+          The Met Xplorer
+        </Link>
+        <a href="https://www.metmuseum.org/">
+          <img src={met_logo} alt="THE MET red logo" className="header__logo" />
+        </a>
       </header>
     </>
   );

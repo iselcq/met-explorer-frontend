@@ -1,5 +1,7 @@
 import "./Main.css";
 import DepartmentCard from "../DepartmentCard/DepartmentCard";
+import { Link } from "react-router-dom";
+import departmentsArray from "../../arregloPrueba.json";
 
 function Main() {
   return (
@@ -12,12 +14,13 @@ function Main() {
           Select a department and browse the Art
         </h4>
         <div className="main__container">
-          <DepartmentCard />
-          <DepartmentCard />
-          <DepartmentCard />
-          <DepartmentCard />
-          <DepartmentCard />
-          <DepartmentCard />
+          {departmentsArray.map((card) => {
+            return (
+              <Link to="/department">
+                <DepartmentCard card={card} key={card._id} />
+              </Link>
+            );
+          })}
         </div>
       </div>
     </>

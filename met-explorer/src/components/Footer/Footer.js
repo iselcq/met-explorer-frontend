@@ -9,14 +9,18 @@ function Footer() {
       <footer className="footer">
         <p className="footer__copyright">
           © {year.getFullYear()} THE MET EXPLORER. <br />
-          Powered by The Metropolitan Museum of Art Collection API
+          <a href="https://metmuseum.github.io/#departments">
+            Powered by The Metropolitan Museum of Art Collection API
+          </a>
         </p>
         <p className="footer__practicum">Practicum</p>
-        <img
-          src={github_logo}
-          alt="GitHub logo"
-          className="footer__github-logo"
-        />
+        <a href="https://github.com/iselcq/">
+          <img
+            src={github_logo}
+            alt="GitHub logo"
+            className="footer__github-logo"
+          />
+        </a>
       </footer>
     </>
   );

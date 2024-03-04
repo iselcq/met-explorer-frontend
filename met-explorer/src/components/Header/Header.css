@@ -10,15 +10,17 @@
 .header__logo {
   margin-bottom: 26px;
   width: 100px;
-  color: #fff;
+  /* color: #fff; */
   margin-top: 15px;
   margin-right: 56px;
+  background-image: url(../../images/the_met_red.png);
 }
 
 .header__title {
   margin-bottom: 26px;
   margin-right: 56px;
   margin-left: 56px;
+  text-decoration: none;
   width: 200 px;
   font-family: "Noto";
   font-weight: 500;
