@@ -10,7 +10,10 @@ function DepartmentCard(props) {
           className="department-card__image"
           src={pruebaCard}
         />
-        <p className="department-card__number"> {props.card.displayName}</p>
+        <p className="department-card__number">
+          {" "}
+          Department #{props.card.departmentId}
+        </p>
         <h2 className="department-card__department">
           {props.card.displayName}
         </h2>

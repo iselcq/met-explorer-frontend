@@ -2,6 +2,7 @@ import "./Main.css";
 import DepartmentCard from "../DepartmentCard/DepartmentCard";
 import { Link } from "react-router-dom";
 import departmentsArray from "../../arregloPrueba.json";
+import testArray from "../../parregloPruebaObjetos.json";
 
 function Main() {
   return (
