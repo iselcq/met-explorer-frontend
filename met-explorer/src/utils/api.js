@@ -36,6 +36,12 @@ class Api {
       }
     );
   }
+
+  getDepartmentImage(randomId) {
+    return this._fetchData(`objects/${randomId}`, {
+      method: "GET",
+    });
+  }
 }
 
 export default Api;

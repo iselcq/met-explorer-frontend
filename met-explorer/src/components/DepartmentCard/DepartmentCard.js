@@ -1,14 +1,14 @@
 import "./DepartmentCard.css";
-import pruebaCard from "../../images/pruebaCard.png";
+// import pruebaCard from "../../images/pruebaCard.png";
 
 function DepartmentCard(props) {
   return (
     <>
       <div className="department-card">
         <img
-          alt="departamento"
+          alt="random object image from department"
           className="department-card__image"
-          src={pruebaCard}
+          src={props.card.primaryImageSmall}
         />
         <p className="department-card__number">
           {" "}

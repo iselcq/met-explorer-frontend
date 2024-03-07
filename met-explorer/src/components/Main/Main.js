@@ -1,6 +1,6 @@
 import "./Main.css";
 import DepartmentCard from "../DepartmentCard/DepartmentCard";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function Main(props) {
   const navigate = useNavigate();
@@ -16,9 +16,8 @@ function Main(props) {
         <div className="main__container">
           {props.departmentsArray.map((card) => {
             return (
-              <Link
+              <div
                 key={card.departmentId}
-                to={`/department/${card.departmentId}`}
                 onClick={(e) => {
                   e.preventDefault();
                   props.handleDepartmentChange(card);
@@ -26,7 +25,7 @@ function Main(props) {
                 }}
               >
                 <DepartmentCard card={card} />
-              </Link>
+              </div>
             );
           })}
         </div>
