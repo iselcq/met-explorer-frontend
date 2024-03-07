@@ -1,7 +1,7 @@
 .results-card {
   width: 400px;
-  background-color: #fae9ea;
-  opacity: 0.9;
+  background-color: #fefefe;
+  opacity: 1;
   border-radius: 10px 10px 10px 10px;
   margin-bottom: 40px;
   margin-right: 20px;
@@ -38,9 +38,29 @@
   font-family: "Galyon";
   font-style: italic;
   font-size: 14px;
+  margin-top: 20px;
   line-height: 20px;
-  margin-left: 24px;
   color: #6b6464;
+  opacity: 0.8;
+  height: 24px;
+}
+
+.results-card__url {
+  font-family: "Galyon";
+  font-style: italic;
+  font-size: 14px;
+  line-height: 20px;
+  color: #c83232;
+  margin-bottom: 10px;
+  /* text-decoration: none; */
+  margin-left: 220px;
+  margin-top: 20px;
+  /* width: 200px; */
+}
+
+.results-card__info {
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .results-card__author {
@@ -58,15 +78,4 @@
   line-height: 20px;
   margin-left: 24px;
   color: rgb(102, 74, 74);
-}
-
-.results-card__url {
-  font-family: "Galyon";
-  font-style: italic;
-  font-size: 14px;
-  line-height: 20px;
-  color: #c83232;
-  margin-bottom: 10px;
-  text-decoration: none;
-  margin-left: 150px;
 }

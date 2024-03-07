@@ -34,10 +34,7 @@ body {
   max-width: 1440px;
   margin: 0 auto;
   background-image: url("../../images/met-5th-ave.png");
-  /* background-position: center; */
   background-repeat: no-repeat;
   background-size: cover;
-  /* background-origin: padding-box; */
-  /* falta el scroll */
   background-attachment: fixed;
 }

@@ -10,7 +10,12 @@ function ResultsCard(props) {
           className="results-card__image"
           src={props.card.primaryImageSmall}
         />
-        <p className="results-card__id">ID: {props.card.objectId}</p>
+        <div className="results-card__info">
+          <p className="results-card__id">ID: {props.card.objectId}</p>
+          <Link to={props.card.objectURL} className="results-card__url">
+            View More
+          </Link>
+        </div>
         <h2 className="results-card__title">{props.card.title}</h2>
         <p className="results-card__author">
           {props.card.artistDisplayName
@@ -23,11 +28,7 @@ function ResultsCard(props) {
             ? props.card.artistDisplayBio
             : "Details: Unknown"}
         </p>
-        <p className="results-card__url">
-          <Link to={props.card.objectURL} className="results-card__url">
-            View More...
-          </Link>
-        </p>
+        <p className="results-card__url"></p>
       </div>
     </>
   );

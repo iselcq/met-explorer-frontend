@@ -3,14 +3,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: rgba(196, 196, 196, 0.1) 2px solid;
-  background-color: rgba(0, 0, 0, 0.38);
+  border-bottom: rgba(196, 196, 196, 0.3) 2px solid;
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .header__logo {
   margin-bottom: 26px;
   width: 100px;
-  /* color: #fff; */
   margin-top: 15px;
   margin-right: 56px;
   background-image: url(../../images/the_met_red.png);
