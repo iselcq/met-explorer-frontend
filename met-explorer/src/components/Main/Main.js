@@ -1,10 +1,10 @@
 import "./Main.css";
 import DepartmentCard from "../DepartmentCard/DepartmentCard";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import departmentsArray from "../../arregloPrueba.json";
-import testArray from "../../parregloPruebaObjetos.json";
 
-function Main() {
+function Main(props) {
+  const navigate = useNavigate();
   return (
     <>
       <div className="main">
@@ -17,8 +17,15 @@ function Main() {
         <div className="main__container">
           {departmentsArray.map((card) => {
             return (
-              <Link to="/department">
-                <DepartmentCard card={card} key={card._id} />
+              <Link
+                to={`/department/${card.departmentId}`}
+                onClick={(e) => {
+                  e.preventDefault();
+                  props.handleDepartmentChange(card);
+                  navigate(`/department/${card.departmentId}`);
+                }}
+              >
+                <DepartmentCard card={card} key={card.departmentId} />
               </Link>
             );
           })}

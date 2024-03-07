@@ -1,3 +1,5 @@
+@import url("../../utils/normalize.css");
+
 @font-face {
   src: url("../../vendor/fonts/Galyon-Book-Italic.woff"); /*ruta del archivo fuente */
   font-family: "Galyon"; /*nombre para identificar la fuente en los archivos CSS */

@@ -6,10 +6,12 @@ function DepartmentResults(props) {
   return (
     <>
       <div className="department-results">
-        <h1 className="department-results__title">European Paintings</h1>
+        <h1 className="department-results__title">
+          {props.selectedDepartment.displayName}
+        </h1>
         <div className="department-results__container">
           {testArray.map((card) => {
-            return <ResultsCard card={card} key={card._id} />;
+            return <ResultsCard card={card} key={card.objectId} />;
           })}
         </div>
       </div>

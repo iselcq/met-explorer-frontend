@@ -9,12 +9,28 @@ import Author from "../Author/Author.js";
 import DepartmentResults from "../DepartmentResults/DepartmentResults.js";
 
 function App() {
+  const [selectedDepartment, setSelectedDepartment] = React.useState({});
+
+  function handleDepartmentChange(newDepartment) {
+    console.log(newDepartment);
+    setSelectedDepartment(newDepartment);
+  }
+
   return (
     <>
       <Header />
       <Routes>
-        <Route exact path="/" element={<Main />} />
-        <Route path="/department" element={<DepartmentResults />} />
+        <Route
+          exact
+          path="/"
+          element={<Main handleDepartmentChange={handleDepartmentChange} />}
+        />
+        <Route
+          path="/department/:id"
+          element={
+            <DepartmentResults selectedDepartment={selectedDepartment} />
+          }
+        />
       </Routes>
       <Author />
       <Footer />
