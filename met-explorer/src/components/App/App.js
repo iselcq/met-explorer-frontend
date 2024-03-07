@@ -13,6 +13,7 @@ function App() {
   const [selectedDepartment, setSelectedDepartment] = React.useState({});
   const [departmentsArray, setDepartmentsArray] = React.useState([]);
   const [initialFetchDone, setInitialFetchDone] = React.useState(false);
+  const [isLoading, setIsLoading] = React.useState(true);
 
   const getRandomElement = (arr) => arr[Math.floor(Math.random() * arr.length)];
 
@@ -47,6 +48,7 @@ function App() {
       });
       Promise.all(updatedDepartments).then((departmentsWithImages) => {
         setDepartmentsArray(departmentsWithImages);
+        setIsLoading(false);
       });
     }
   }, [initialFetchDone]);
@@ -62,6 +64,7 @@ function App() {
             <Main
               handleDepartmentChange={handleDepartmentChange}
               departmentsArray={departmentsArray}
+              isLoading={isLoading}
             />
           }
         />
