@@ -29,7 +29,7 @@ function App() {
     setSelectedDepartment(newDepartment);
     api.getDepartmentObjects(newDepartment.departmentId).then((res) => {
       setDepartmentObjects(res.objectIDs);
-      const objectsList = res.objectIDs.slice(0, 14).map(async (id) => {
+      const objectsList = res.objectIDs.slice(0, 15).map(async (id) => {
         const objectElement = await api.getDepartmentObjectById(id);
 
         return objectElement;

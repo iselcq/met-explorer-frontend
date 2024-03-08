@@ -34,7 +34,7 @@ function ResultsCard(props) {
             ? props.card.artistDisplayBio
             : "Details: Unknown"}
         </p>
-        <p className="results-card__url"></p>)
+        <p className="results-card__url"></p>
       </div>
     </>
   );
