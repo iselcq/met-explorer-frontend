@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import Preloader from "../Preloader/Preloader";
+
 import notFoundImg from "../../images/imageNotFound.jpg";
 import "./ResultsCard.css";
 

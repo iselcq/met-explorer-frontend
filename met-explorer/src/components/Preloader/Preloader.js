@@ -1,7 +1,6 @@
 import "./Preloader.css";
 
 function Preloader(props) {
-  console.log("preloader", props.fullScreen);
   return (
     <>
       <div

@@ -38,7 +38,6 @@ function App() {
         .then((res) => {
           setCurrentDepartmentObjects(res);
           setIsLoadingResults(false);
-          console.log(isLoadingResults);
         })
         .catch((err) => {
           setIsLoadingResults(false);
