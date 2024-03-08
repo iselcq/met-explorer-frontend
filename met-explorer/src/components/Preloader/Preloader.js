@@ -1,9 +1,16 @@
 import "./Preloader.css";
 
-function Preloader() {
+function Preloader(props) {
+  console.log("preloader", props.fullScreen);
   return (
     <>
-      <div className="preloader__container">
+      <div
+        className={
+          props.fullScreen
+            ? "preloader__container_full-screen"
+            : "preloader__container"
+        }
+      >
         <i className="preloader__circle"></i>
       </div>
     </>

@@ -13,17 +13,42 @@ function App() {
   const [selectedDepartment, setSelectedDepartment] = React.useState({});
   const [departmentsArray, setDepartmentsArray] = React.useState([]);
   const [initialFetchDone, setInitialFetchDone] = React.useState(false);
-  const [isLoading, setIsLoading] = React.useState(true);
+  const [departmentObjects, setDepartmentObjects] = React.useState([]);
+  const [currentDepartmentObjects, setCurrentDepartmentObjects] =
+    React.useState([]);
+  const [isLoadingMain, setIsLoadingMain] = React.useState(true);
+  const [isLoadingResults, setIsLoadingResults] = React.useState(true);
 
   const getRandomElement = (arr) => arr[Math.floor(Math.random() * arr.length)];
 
   const api = new Api();
 
   function handleDepartmentChange(newDepartment) {
+    setCurrentDepartmentObjects([]);
+    setIsLoadingResults(true);
     setSelectedDepartment(newDepartment);
+    api.getDepartmentObjects(newDepartment.departmentId).then((res) => {
+      setDepartmentObjects(res.objectIDs);
+      const objectsList = res.objectIDs.slice(0, 14).map(async (id) => {
+        const objectElement = await api.getDepartmentObjectById(id);
+
+        return objectElement;
+      });
+      Promise.all(objectsList)
+        .then((res) => {
+          setCurrentDepartmentObjects(res);
+          setIsLoadingResults(false);
+          console.log(isLoadingResults);
+        })
+        .catch((err) => {
+          setIsLoadingResults(false);
+          console.log(err.name);
+        });
+    });
   }
 
   React.useEffect(() => {
+    setIsLoadingMain(true);
     api.getDepartments().then((res) => {
       setDepartmentsArray(res.departments);
       setInitialFetchDone(true);
@@ -37,7 +62,7 @@ function App() {
           department.departmentId
         );
         const random = getRandomElement(departmentObjects.objectIDs);
-        const image = await api.getDepartmentImage(random);
+        const image = await api.getDepartmentObjectById(random);
 
         return {
           ...department,
@@ -46,10 +71,15 @@ function App() {
             : galleryImage,
         };
       });
-      Promise.all(updatedDepartments).then((departmentsWithImages) => {
-        setDepartmentsArray(departmentsWithImages);
-        setIsLoading(false);
-      });
+      Promise.all(updatedDepartments)
+        .then((departmentsWithImages) => {
+          setDepartmentsArray(departmentsWithImages);
+          setIsLoadingMain(false);
+        })
+        .catch((err) => {
+          console.log(err.name);
+          setIsLoadingMain(false);
+        });
     }
   }, [initialFetchDone]);
 
@@ -64,14 +94,18 @@ function App() {
             <Main
               handleDepartmentChange={handleDepartmentChange}
               departmentsArray={departmentsArray}
-              isLoading={isLoading}
+              isLoadingMain={isLoadingMain}
             />
           }
         />
         <Route
           path="/department/:id"
           element={
-            <DepartmentResults selectedDepartment={selectedDepartment} />
+            <DepartmentResults
+              selectedDepartment={selectedDepartment}
+              currentDepartmentObjects={currentDepartmentObjects}
+              isLoadingResults={isLoadingResults}
+            />
           }
         />
       </Routes>

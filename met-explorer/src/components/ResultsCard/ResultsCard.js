@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import Preloader from "../Preloader/Preloader";
+import notFoundImg from "../../images/imageNotFound.jpg";
 import "./ResultsCard.css";
 
 function ResultsCard(props) {
@@ -8,10 +10,14 @@ function ResultsCard(props) {
         <img
           alt="departamento"
           className="results-card__image"
-          src={props.card.primaryImageSmall}
+          src={
+            props.card.primaryImageSmall
+              ? props.card.primaryImageSmall
+              : notFoundImg
+          }
         />
         <div className="results-card__info">
-          <p className="results-card__id">ID: {props.card.objectId}</p>
+          <p className="results-card__id">ID: {props.card.objectID}</p>
           <Link to={props.card.objectURL} className="results-card__url">
             View More
           </Link>
@@ -28,7 +34,7 @@ function ResultsCard(props) {
             ? props.card.artistDisplayBio
             : "Details: Unknown"}
         </p>
-        <p className="results-card__url"></p>
+        <p className="results-card__url"></p>)
       </div>
     </>
   );

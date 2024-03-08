@@ -8,7 +8,7 @@ function DepartmentCard(props) {
     <>
       <div className="department-card">
         {props.isLoading ? (
-          <Preloader />
+          <Preloader fullScreen={false} />
         ) : (
           <>
             <img

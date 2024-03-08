@@ -3,7 +3,7 @@ import DepartmentCard from "../DepartmentCard/DepartmentCard";
 import { useNavigate } from "react-router-dom";
 
 function Main(props) {
-  const isLoading = props.isLoading;
+  const isLoading = props.isLoadingMain;
   const navigate = useNavigate();
   return (
     <>

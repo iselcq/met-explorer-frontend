@@ -37,7 +37,7 @@ class Api {
     );
   }
 
-  getDepartmentImage(randomId) {
+  getDepartmentObjectById(randomId) {
     return this._fetchData(`objects/${randomId}`, {
       method: "GET",
     });

@@ -1,8 +1,10 @@
 import ResultsCard from "../ResultsCard/ResultsCard.js";
-import testArray from "../../parregloPruebaObjetos.json";
+import Preloader from "../Preloader/Preloader";
 import "./DepartmentResults.css";
 
 function DepartmentResults(props) {
+  const isLoading = props.isLoadingResults;
+
   return (
     <>
       <div className="department-results">
@@ -10,9 +12,21 @@ function DepartmentResults(props) {
           {props.selectedDepartment.displayName}
         </h1>
         <div className="department-results__container">
-          {testArray.map((card) => {
-            return <ResultsCard card={card} key={card.objectId} />;
-          })}
+          {isLoading ? (
+            <Preloader fullScreen={true} />
+          ) : (
+            <>
+              {props.currentDepartmentObjects.map((card) => {
+                return (
+                  <ResultsCard
+                    card={card}
+                    key={card.objectID}
+                    isLoading={isLoading}
+                  />
+                );
+              })}
+            </>
+          )}
         </div>
       </div>
     </>
