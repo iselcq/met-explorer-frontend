@@ -11,7 +11,7 @@
 }
 
 .department-card:hover {
-  transform: scale(1.045);
+  transform: scale(0.95);
   cursor: pointer;
 }
 
