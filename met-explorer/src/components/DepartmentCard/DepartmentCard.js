@@ -16,6 +16,7 @@ function DepartmentCard(props) {
               className="department-card__image"
               src={props.card.primaryImageSmall}
             />
+
             <p className="department-card__number">
               {" "}
               Department #{props.card.departmentId}

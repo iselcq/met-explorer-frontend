@@ -1,7 +1,7 @@
 .preloader__container {
   margin: 0;
-  height: 430px;
-  width: 400px;
+  width: 360px;
+  height: 450px;
   background-color: #fefefe;
   overflow: hidden;
   display: flex;

@@ -38,3 +38,9 @@ body {
   background-size: cover;
   background-attachment: fixed;
 }
+
+@media screen and (max-width: 767px) {
+  body {
+    max-width: 320px;
+  }
+}

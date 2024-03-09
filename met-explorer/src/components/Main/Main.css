@@ -1,7 +1,15 @@
 .main {
   background-color: rgba(0, 0, 0, 0.4);
   margin-top: 0[x];
-  max-width: 1440px;
+  max-width: 1441px;
+}
+
+.main__header {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .main__title {
@@ -11,11 +19,11 @@
   line-height: 64px;
   color: rgba(255, 255, 255, 0.85);
   text-shadow: 2px 8px 6px rgba(0, 0, 0, 0.5), 0px -5px 35px black;
-  margin-left: auto;
-  margin-right: auto;
   margin-top: 0;
-  width: 1000px;
+  margin-bottom: 0;
+  width: 608px;
   padding-top: 80px;
+  padding-bottom: 32px;
 }
 
 .main__subtitle {
@@ -24,16 +32,63 @@
   font-size: 23px;
   line-height: 24px;
   color: rgba(255, 255, 2555);
-  width: 1000px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 40px;
-  text-shadow: 2px 8px 6px rgba(0, 0, 0, 1), 0px -5px 35px black;
+  width: 608px;
+  text-shadow: 2px 8px 6px rgba(0, 0, 0, 1), 0px -5px 35px rgba(0, 0, 0, 0.245);
+  margin: 0;
 }
 
 .main__container {
-  display: flex;
-  justify-content: center;
   margin-top: 80px;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 360px 360px 360px;
+  column-gap: 16px;
+  row-gap: 16px;
+  justify-content: center;
+  padding-bottom: 16px;
+}
+
+@media screen and (max-width: 1439px) {
+  .main__title {
+    font-size: 32px;
+    line-height: 40px;
+    width: 452px;
+    padding-top: 38px;
+    padding-bottom: 0;
+  }
+
+  .main__subtitle {
+    width: 452px;
+    font-size: 18px;
+    line-height: 24px;
+    margin-top: 0;
+  }
+
+  .main__container {
+    margin-top: 40px;
+    grid-template-columns: 224px 224px 224px;
+    column-gap: 8px;
+    row-gap: 8px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .main__title {
+    font-size: 32px;
+    line-height: 40px;
+    max-width: 288px;
+    padding-top: 30px;
+    padding-bottom: 0;
+  }
+
+  .main__subtitle {
+    font-size: 20px;
+    line-height: 24px;
+    max-width: 288px;
+  }
+
+  .main__container {
+    margin-top: 32px;
+    grid-template-columns: 288px;
+    row-gap: 10px;
+  }
 }

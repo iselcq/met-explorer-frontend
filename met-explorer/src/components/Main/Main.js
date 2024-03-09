@@ -8,12 +8,14 @@ function Main(props) {
   return (
     <>
       <div className="main">
-        <h1 className="main__title">
-          Xplore The MET and travel around the world
-        </h1>
-        <h4 className="main__subtitle">
-          Select a department and browse the Art
-        </h4>
+        <div className="main__header">
+          <h1 className="main__title">
+            Xplore The MET and travel around the world
+          </h1>
+          <h4 className="main__subtitle">
+            Select a department and browse the Art
+          </h4>
+        </div>
         <div className="main__container">
           {props.departmentsArray.map((card) => {
             return (
