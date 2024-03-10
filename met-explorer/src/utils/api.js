@@ -4,7 +4,6 @@ class Api {
   }
 
   _fetchData(url, options) {
-    console.log("_fetchData", this.baseURL);
     return fetch(`${this.baseURL}/${url}`, {
       headers: {
         "Content-Type": "application/json",

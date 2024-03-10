@@ -23,7 +23,7 @@ function Main(props) {
                 key={card.departmentId}
                 onClick={(e) => {
                   e.preventDefault();
-                  props.handleDepartmentChange(card);
+                  props.handleDepartmentChange(card.departmentId);
                   navigate(`/department/${card.departmentId}`);
                 }}
               >

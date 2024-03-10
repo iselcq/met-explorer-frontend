@@ -1,9 +1,26 @@
+import { useEffect } from "react";
 import ResultsCard from "../ResultsCard/ResultsCard.js";
 import Preloader from "../Preloader/Preloader";
 import "./DepartmentResults.css";
 
 function DepartmentResults(props) {
   const isLoading = props.isLoadingResults;
+
+  function getId() {
+    const urlId = window.location.href;
+    const currentId = urlId.split("department/")[1];
+    return currentId;
+  }
+
+  useEffect(() => {
+    if (
+      props.currentDepartmentObjects.length < 1 &&
+      props.departmentsArray.length > 0
+    ) {
+      const id = getId();
+      props.handleDepartmentChange(id);
+    }
+  }, [props.departmentsArray]);
 
   return (
     <>

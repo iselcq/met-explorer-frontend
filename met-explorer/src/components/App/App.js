@@ -23,9 +23,13 @@ function App() {
 
   const api = new Api();
 
-  function handleDepartmentChange(newDepartment) {
+  function handleDepartmentChange(newDepartmentId) {
     setCurrentDepartmentObjects([]);
     setIsLoadingResults(true);
+    const newDepartment = departmentsArray.find((dept) => {
+      return dept.departmentId == newDepartmentId;
+    });
+    if (!newDepartment) return;
     setSelectedDepartment(newDepartment);
     api.getDepartmentObjects(newDepartment.departmentId).then((res) => {
       setDepartmentObjects(res.objectIDs);
@@ -48,10 +52,16 @@ function App() {
 
   React.useEffect(() => {
     setIsLoadingMain(true);
-    api.getDepartments().then((res) => {
-      setDepartmentsArray(res.departments);
-      setInitialFetchDone(true);
-    });
+    api
+      .getDepartments()
+      .then((res) => {
+        setDepartmentsArray(res.departments);
+        setInitialFetchDone(true);
+      })
+      .catch((err) => {
+        console.log(err);
+        alert("There was a problem fetching the data, please try again.");
+      });
   }, []);
 
   React.useEffect(() => {
@@ -101,6 +111,8 @@ function App() {
           path="/department/:id"
           element={
             <DepartmentResults
+              departmentsArray={departmentsArray}
+              handleDepartmentChange={handleDepartmentChange}
               selectedDepartment={selectedDepartment}
               currentDepartmentObjects={currentDepartmentObjects}
               isLoadingResults={isLoadingResults}

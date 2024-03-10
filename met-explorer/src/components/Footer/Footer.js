@@ -13,14 +13,16 @@ function Footer() {
             Powered by The Metropolitan Museum of Art Collection API
           </a>
         </p>
-        <p className="footer__practicum">Practicum</p>
-        <a href="https://github.com/iselcq/">
-          <img
-            src={github_logo}
-            alt="GitHub logo"
-            className="footer__github-logo"
-          />
-        </a>
+        <div className="footer__group">
+          <p className="footer__practicum">Practicum</p>
+          <a href="https://github.com/iselcq/">
+            <img
+              src={github_logo}
+              alt="GitHub logo"
+              className="footer__github-logo"
+            />
+          </a>
+        </div>
       </footer>
     </>
   );

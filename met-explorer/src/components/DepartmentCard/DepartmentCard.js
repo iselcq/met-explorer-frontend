@@ -1,7 +1,6 @@
 import "./DepartmentCard.css";
 import Preloader from "../Preloader/Preloader";
-
-// import pruebaCard from "../../images/pruebaCard.png";
+import galleryImage from "../../images/gallery.png";
 
 function DepartmentCard(props) {
   return (
@@ -14,7 +13,11 @@ function DepartmentCard(props) {
             <img
               alt="random object image from department"
               className="department-card__image"
-              src={props.card.primaryImageSmall}
+              src={
+                props.card.primaryImageSmall
+                  ? props.card.primaryImageSmall
+                  : galleryImage
+              }
             />
 
             <p className="department-card__number">

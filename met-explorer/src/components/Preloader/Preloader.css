@@ -36,3 +36,16 @@
     transform: rotate(360deg);
   }
 }
+
+@media screen and (max-width: 1439px) {
+  .preloader__container {
+    width: 224px;
+    height: 390px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .preloader__container {
+    width: 288px;
+    height: 400px;
+  }
+}
