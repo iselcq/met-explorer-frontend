@@ -1,7 +1,7 @@
 .header {
   max-width: 1440px;
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   align-items: center;
   border-bottom: rgba(196, 196, 196, 0.3) 2px solid;
   background-color: rgba(0, 0, 0, 0.4);
@@ -30,4 +30,17 @@
 }
 
 @media screen and (max-width: 767px) {
+  .header__title {
+    font-size: 22px;
+    margin-bottom: 16px;
+    margin-left: 16px;
+  }
+
+  .header__logo {
+    margin-bottom: 26px;
+    width: 60x;
+    margin-top: 15px;
+    margin-left: 30px;
+    margin-right: 5px;
+  }
 }

@@ -28,23 +28,21 @@ function DepartmentResults(props) {
         <h1 className="department-results__title">
           {props.selectedDepartment.displayName}
         </h1>
-        <div className="department-results__container">
-          {isLoading ? (
-            <Preloader fullScreen={true} />
-          ) : (
-            <>
-              {props.currentDepartmentObjects.map((card) => {
-                return (
-                  <ResultsCard
-                    card={card}
-                    key={card.objectID}
-                    isLoading={isLoading}
-                  />
-                );
-              })}
-            </>
-          )}
-        </div>
+        {isLoading ? (
+          <Preloader fullScreen={true} />
+        ) : (
+          <div className="department-results__container">
+            {props.currentDepartmentObjects.map((card) => {
+              return (
+                <ResultsCard
+                  card={card}
+                  key={card.objectID}
+                  isLoading={isLoading}
+                />
+              );
+            })}
+          </div>
+        )}
       </div>
     </>
   );
