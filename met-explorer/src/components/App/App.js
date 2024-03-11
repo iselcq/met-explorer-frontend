@@ -51,6 +51,10 @@ function App() {
   }
 
   React.useEffect(() => {
+    document.title = "MET XPLORER";
+  }, []);
+
+  React.useEffect(() => {
     setIsLoadingMain(true);
     api
       .getDepartments()

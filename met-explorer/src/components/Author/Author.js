@@ -1,4 +1,4 @@
-import isel from "../../images/isel.jpeg";
+import isel from "../../images/isel.jpg";
 import "../Author/Author.css";
 
 function Author() {
@@ -10,12 +10,14 @@ function Author() {
         <div className="author__group">
           <h2 className="author__title">About the author</h2>
           <p className="author__info">
-            Este bloque describe al autor del proyecto. Aquí debe indicar tu
-            nombre, a qué te dedicas y qué tecnologías de desarrollo conoces.
+            My name is Isel Castro, I am from Mexico and I am very interested in
+            art,in 2021 I had the possibility of visiting the MET Museum at New
+            York City and it became one of my museums favorites in the world.
           </p>
           <p className="author__info">
-            También puedes hablar de tu experiencia con Practicum, de lo que
-            aprendiste allí y de cómo puedes ayudar a los clientes potenciales.
+            For this web-app I used HTML, CSS, React, React Router, the native
+            library Fetch and as a backend The Metropolitan Museum of Art
+            Collection API.
           </p>
         </div>
       </div>
