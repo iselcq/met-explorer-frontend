@@ -1,11 +1,11 @@
 import isel from "../../images/isel.jpg";
-import "../Author/Author.css";
+import "./Author.css";
 
 function Author() {
   return (
     <>
       <div className="author">
-        <img src={isel} alt="Author photo" className="author__photo" />
+        <img src={isel} alt="Author" className="author__photo" />
 
         <div className="author__group">
           <h2 className="author__title">About the author</h2>

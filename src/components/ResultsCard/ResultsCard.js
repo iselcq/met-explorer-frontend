@@ -8,7 +8,7 @@ function ResultsCard(props) {
     <>
       <div className="results-card">
         <img
-          alt="departamento"
+          alt="departament"
           className="results-card__image"
           src={
             props.card.primaryImageSmall

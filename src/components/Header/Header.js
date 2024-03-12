@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import met_logo from "../../images/the_met_red.png";
 import "./Header.css";

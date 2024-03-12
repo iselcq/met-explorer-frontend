@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import ResultsCard from "../ResultsCard/ResultsCard.js";
-import Preloader from "../Preloader/Preloader";
+import Preloader from "../Preloader/Preloader.js";
 import "./DepartmentResults.css";
 
 function DepartmentResults(props) {

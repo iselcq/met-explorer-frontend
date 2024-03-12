@@ -11,7 +11,7 @@ function DepartmentCard(props) {
         ) : (
           <>
             <img
-              alt="random object image from department"
+              alt="random object from department"
               className="department-card__image"
               src={
                 props.card.primaryImageSmall

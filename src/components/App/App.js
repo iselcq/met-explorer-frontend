@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Routes, useNavigate, Navigate } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import Api from "../../utils/api.js";
 import "./App.css";
 import galleryImage from "../../images/gallery.png";
@@ -13,7 +13,7 @@ function App() {
   const [selectedDepartment, setSelectedDepartment] = React.useState({});
   const [departmentsArray, setDepartmentsArray] = React.useState([]);
   const [initialFetchDone, setInitialFetchDone] = React.useState(false);
-  const [departmentObjects, setDepartmentObjects] = React.useState([]);
+  const [, setDepartmentObjects] = React.useState([]);
   const [currentDepartmentObjects, setCurrentDepartmentObjects] =
     React.useState([]);
   const [isLoadingMain, setIsLoadingMain] = React.useState(true);
