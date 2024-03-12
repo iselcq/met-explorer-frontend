@@ -20,6 +20,7 @@ function DepartmentResults(props) {
       const id = getId();
       props.handleDepartmentChange(id);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [props.departmentsArray]);
 
   return (

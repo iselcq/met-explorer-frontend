@@ -27,7 +27,7 @@ function App() {
     setCurrentDepartmentObjects([]);
     setIsLoadingResults(true);
     const newDepartment = departmentsArray.find((dept) => {
-      return dept.departmentId == newDepartmentId;
+      return dept.departmentId === Number(newDepartmentId);
     });
     if (!newDepartment) return;
     setSelectedDepartment(newDepartment);
@@ -66,6 +66,7 @@ function App() {
         console.log(err);
         alert("There was a problem fetching the data, please try again.");
       });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   React.useEffect(() => {
@@ -94,6 +95,7 @@ function App() {
           setIsLoadingMain(false);
         });
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [initialFetchDone]);
 
   return (
